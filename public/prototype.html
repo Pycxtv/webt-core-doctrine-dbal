@@ -1,73 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>USARPS Championship Statistics</title>
-    <link href="./output.css" rel="stylesheet">
-</head>
-<body>
-<h1 class="text-4xl text-gray-800">USARPS Championship Statistics</h1>
-<div>
-    <h2 class="text-2xl text-gray-800">Tournament ...</h2>
-    <h3>Date: 08.04.2024</h3>
-    <div class="rounded-xl w-1/4 mx-4">
-        <!-- TODO: Implement responsiveness -->
-        <table class="border-collapse table-auto w-full text-sm rounded-2xl">
-            <thead>
-            <tr>
+    <link href="./output.css" rel="stylesheet" />
+  </head>
+  <body class="min-h-svh flex justify-center bg-slate-950">
+    <main class="bg-gray-900 text-gray-100 my-12 rounded-lg py-6 px-8">
+      <h1 class="text-4xl text-slate-100 font-semibold mb-3">
+        USARPS Championship Statistics
+      </h1>
+      <div class="">
+        <!-- für jedes Tournament -->
+
+
+        <div class="px-4 pt-3 pb-2 bg-gray-800 rounded-2xl">
+          <div class="flex items-baseline justify-between mb-1">
+            <h2 class="text-2xl">Tournament-Name</h2>
+            <p class="text-sm text-gray-300 mr-2">08.04.2024</p>
+          </div>
+          <table class="border-separate border-spacing-x-2 border-spacing-y-4 table-auto w-full text-sm">
+            <!-- <thead class="text-left pb-3"> 
+              <tr>
                 <th>Player 1</th>
                 <th>Symbol</th>
                 <th>Player 2</th>
                 <th>Symbol</th>
                 <th>Time</th>
                 <th>Date</th>
-            </tr>
+              </tr> -->
             </thead>
-            <tbody class="bg-gray-800">
-            <tr>
-                <td class="border-b border-slate-100 p-4 pl-8 text-green-300 font-bold">Felux Willmann</td>
-                <td class="border-b border-slate-100 p-4 pl-8 text-slate-100">🪨</td>
-                <td class="border-b border-slate-100 p-4 pl-8 text-slate-100">Soverin Resner</td>
-                <td class="border-b border-slate-100 p-4 pl-8 text-slate-100">✂️</td>
-                <td class="border-b border-slate-100 p-4 pl-8 text-slate-100">12:34</td>
-                <td class="border-b border-slate-100 p-4 pl-8 text-slate-100">08.04.2024</td>
-            </tr>
-            <tr>
-                <td class="border-b border-slate-100 p-4 pl-8 text-slate-100">John Doe</td>
-                <td class="border-b border-slate-100 p-4 pl-8 text-slate-100">✂️</td>
-                <td class="border-b border-slate-100 p-4 pl-8 text-green-300 font-bold">Jane Doe</td>
-                <td class="border-b border-slate-100 p-4 pl-8 text-slate-100">🪨</td>
-                <td class="border-b border-slate-100 p-4 pl-8 text-slate-100">12:35</td>
-                <td class="border-b border-slate-100 p-4 pl-8 text-slate-100">08.04.2024</td>
-            </tr>
-            <tr>
-                <td class="border-b border-slate-100 p-4 pl-8 text-green-300 font-bold">John Doe</td>
-                <td class="border-b border-slate-100 p-4 pl-8 text-slate-100">🪨</td>
-                <td class="border-b border-slate-100 p-4 pl-8 text-slate-100">Felux Willmann</td>
-                <td class="border-b border-slate-100 p-4 pl-8 text-slate-100">✂️</td>
-                <td class="border-b border-slate-100 p-4 pl-8 text-slate-100">12:36</td>
-                <td class="border-b border-slate-100 p-4 pl-8 text-slate-100">08.04.2024</td>
-            </tr>
-            <tr>
-                <td class="border-b border-slate-100 p-4 pl-8 text-green-300 font-bold">Mirco Jondarko</td>
-                <td class="border-b border-slate-100 p-4 pl-8 text-slate-100">📃</td>
-                <td class="border-b border-slate-100 p-4 pl-8 text-slate-100">Felux Willmann</td>
-                <td class="border-b border-slate-100 p-4 pl-8 text-slate-100">🪨</td>
-                <td class="border-b border-slate-100 p-4 pl-8 text-slate-100">12:40</td>
-                <td class="border-b border-slate-100 p-4 pl-8 text-slate-100">08.04.2024</td>
-            </tr>
-            <tr>
-                <td class="border-b border-slate-100 p-4 pl-8 text-slate-100">Felux Willmann</td>
-                <td class="border-b border-slate-100 p-4 pl-8 text-slate-100">📃</td>
-                <td class="border-b border-slate-100 p-4 pl-8 text-green-300 font-bold">Ramon Kribs</td>
-                <td class="border-b border-slate-100 p-4 pl-8 text-slate-100">✂️</td>
-                <td class="border-b border-slate-100 p-4 pl-8 text-slate-100">12:40</td>
-                <td class="border-b border-slate-100 p-4 pl-8 text-slate-100">08.04.2024</td>
-            </tr>
+            <tbody class="text-left">
+              <tr>
+                <td class="text-green-300 font-bold">Felux Willmann</td>
+                <td class="">🪨</td>
+                <td class="">Soverin Resner</td>
+                <td class="">✂️</td>
+                <td class="">12:34</td>
+                <td class="  ">08.04.2024</td>
+              </tr>
+              <tr>
+                <td class="">John Doe</td>
+                <td class="">✂️</td>
+                <td class="text-green-300 font-bold">Jane Doe</td>
+                <td class="  ">🪨</td>
+                <td class="  ">12:35</td>
+                <td class="  ">08.04.2024</td>
+              </tr>
+              <tr>
+                <td class="text-green-300 font-bold">John Doe</td>
+                <td class="  ">🪨</td>
+                <td class="  ">Felux Willmann</td>
+                <td class="  ">✂️</td>
+                <td class="  ">12:36</td>
+                <td class="  ">08.04.2024</td>
+              </tr>
+              <tr>
+                <td class="text-green-300 font-bold">Mirco Jondarko</td>
+                <td class="  ">📃</td>
+                <td class="  ">Felux Willmann</td>
+                <td class="  ">🪨</td>
+                <td class="  ">12:40</td>
+                <td class="  ">08.04.2024</td>
+              </tr>
+              <tr>
+                <td class="  ">Felux Willmann</td>
+                <td class="  ">📃</td>
+                <td class="text-green-300 font-bold">Ramon Kribs</td>
+                <td class="  ">✂️</td>
+                <td class="  ">12:40</td>
+                <td class="  ">08.04.2024</td>
+              </tr>
             </tbody>
-        </table>
-        <p>Legend: <span class="text-green-300 font-bold">Winner</span></p>
-    </div>
-</div>
-</body>
+          </table>
+        </div>
+      </div>
+    </main>
+  </body>
 </html>
