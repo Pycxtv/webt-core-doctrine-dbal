@@ -14,9 +14,11 @@ $conn = DriverManager::getConnection($connectionParams);
 
 $queryBuilder = $conn->createQueryBuilder();
 
-$_POST;
-
-$date = strtotime($_POST['rounddate']);
+if ($_POST['rounddate'] === '') {
+    $date = time();
+} else {
+    $date = strtotime($_POST['rounddate']);
+}
 
 $queryBuilder
     ->insert('gameround')
