@@ -28,5 +28,37 @@ $result = $queryBuilder->executeQuery();
     // echo sprintf("Round %d: %s played %s against %s played %s\n", $row['gameround_id'], $row['player1_name'], $row['player1_symbol'], $row['player2_name'], $row['player2_symbol']);
 // }
 
-// TBD: Twig for displaying the rounds,
-// Create + Delete
+
+$rounds = array_map(function($row) {
+
+    // calculate winner
+    $winner = null;
+    if ($row['player1_symbol'] === $row['player2_symbol']) {
+        $winner = null;
+    } elseif ($row['player1_symbol'] === 'R' && $row['player2_symbol'] === 'S') {
+        $winner = 1;
+    } elseif ($row['player1_symbol'] === 'S' && $row['player2_symbol'] === 'P') {
+        $winner = 1;
+    } elseif ($row['player1_symbol'] === 'P' && $row['player2_symbol'] === 'R') {
+        $winner = 1;
+    } else {
+        $winner = 2;
+    }
+
+    return [
+        'gameround_id' => $row['gameround_id'],
+        'rounddate' => $row['rounddate'],
+        'player1_name' => $row['player1_name'],
+        'player1_symbol' => $row['player1_symbol'],
+        'player2_name' => $row['player2_name'],
+        'player2_symbol' => $row['player2_symbol'],
+        'winner' => $winner
+    ];
+    
+}, $result->fetchAllAssociative());
+
+
+$loader = new \Twig\Loader\FilesystemLoader('../templates');
+$twig = new \Twig\Environment($loader);
+$template = $twig->load('index.html.twig');
+echo $template->render(["gamerounds" => $rounds]);
