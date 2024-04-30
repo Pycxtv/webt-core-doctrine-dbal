@@ -66,6 +66,37 @@
             </tbody>
           </table>
         </div>
+        <form action="create.php" method="post" class="mt-4 p-4 rounded-xl bg-gray-800 [&_input]:bg-gray-700 [&_input]:p-1 [&_input]:rounded
+        [&_select]:bg-gray-700
+        [&_select]:p-1
+        [&_select]:rounded
+        ">
+        <h2 class="text-xl font-semibold">New Game Round</h2>
+            <fieldset>
+                <legend class="text-sm">Player 1</legend>
+                <input type="text" name="player1_name" id="player1_name" class="">
+                <select name="player1_symbol" id="player1_symbol">
+                    <option value="R">Rock</option>
+                    <option value="P">Paper</option>
+                    <option value="S">Scissors</option>
+                </select>
+            </fieldset>
+
+            <fieldset>
+                <legend class="text-sm">Player 2</legend>
+                <input type="text" name="player2_name" id="player2_name">
+                <select name="player2_symbol" id="player2_symbol">
+                    <option value="R">Rock</option>
+                    <option value="P">Paper</option>
+                    <option value="S">Scissors</option>
+                </select>
+            </fieldset>
+            <h3 class="text-sm">Date</h3>
+            <div class="mb-2">
+                <input type="datetime-local" name="rounddate" id="rounddate">
+            </div>
+            <input type="submit" value="Hinzufügen" class="w-full !bg-sky-700 text-sky-100 !focus:bg-sky-800 cursor-pointer">
+        </form>
     </main>
   </body>
 </html>
