@@ -1,8 +1,8 @@
 <tr>
-    <td class="text-green-300 font-bold">Felux Willmann</td>
-    <td class="">🪨</td>
-    <td class="">Soverin Resner</td>
-    <td class="">✂️</td>
-    <td class="">{{ }}</td>
-    <td class="  ">08.04.2024</td>
-  </tr>
+    <td class="text-green-300 font-bold">{{ gameround.player1_name }}</td>
+    <td class="">{{ gameround.player1_symbol|rpsEmoji }}</td>
+    <td class="">{{ gameround.player2_name }}</td>
+    <td class="">{{ gameround.player2_symbol|rpsEmoji }}️</td>
+    <td class="">{{ gameround.rounddate.hour ~ ":" ~ gameround.rounddate.minute}}</td>
+    <td class="  ">{{ gameround.rounddate.day ~ "." ~ gameround.rounddate.month ~ "." ~ gameround.rounddate.year }}</td>
+</tr>
