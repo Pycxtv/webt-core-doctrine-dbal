@@ -1,7 +1,7 @@
 <tr class="text-gray-100">
-    <td class="text-green-300 font-bold">{{ gameround.player1_name }}</td>
+    <td class="{{ gameround.winner == 1 ? "text-green-300 font-bold" : "" }}">{{ gameround.player1_name }}</td>
     <td class="">{{ gameround.player1_symbol|rpsEmoji }}</td>
-    <td class="">{{ gameround.player2_name }}</td>
+    <td class="{{ gameround.winner == 2 ? "text-green-300 font-bold" : "" }}">{{ gameround.player2_name }}</td>
     <td class="">{{ gameround.player2_symbol|rpsEmoji }}️</td>
     <td class="">{{ gameround.rounddate | date("H:i") }}</td>
     <td class="  ">{{ gameround.rounddate | date("j.n.Y") }}</td>
