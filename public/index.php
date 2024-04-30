@@ -47,9 +47,13 @@ $rounds = array_map(function($row) {
     }
 	echo($row['player2_symbol']);
 
+    $date = new DateTime();
+    $date->setTimestamp(intval($row['rounddate']));
+    $date = date_parse($date->format('Y-m-d H:i:s'));
+
     return [
         'gameround_id' => $row['gameround_id'],
-        'rounddate' => date_parse($row['rounddate']),
+        'rounddate' => $date,
         'player1_name' => $row['player1_name'],
         'player1_symbol' => $row['player1_symbol'],
         'player2_name' => $row['player2_name'],
