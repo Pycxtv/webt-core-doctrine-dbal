@@ -1,9 +1,9 @@
-<tr>
+<tr class="text-gray-100">
     <td class="text-green-300 font-bold">{{ gameround.player1_name }}</td>
     <td class="">{{ gameround.player1_symbol|rpsEmoji }}</td>
     <td class="">{{ gameround.player2_name }}</td>
     <td class="">{{ gameround.player2_symbol|rpsEmoji }}️</td>
-    <td class="">{{ gameround.rounddate.hour ~ ":" ~ gameround.rounddate.minute}}</td>
-    <td class="  ">{{ gameround.rounddate.day ~ "." ~ gameround.rounddate.month ~ "." ~ gameround.rounddate.year }}</td>
+    <td class="">{{ gameround.rounddate | date("H:i") }}</td>
+    <td class="  ">{{ gameround.rounddate | date("j.n.Y") }}</td>
     <td ><form action="delete.php" method="post"><input type="hidden" name="gameround_id" value="{{ gameround.gameround_id }}"><input type="submit" value="Löschen" class="bg-gray-700 px-2 py-1 cursor-pointer hover:bg-red-700 transition-colors rounded"></form></td>
 </tr>

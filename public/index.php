@@ -49,7 +49,7 @@ $rounds = array_map(function($row) {
 
     $date = new DateTime();
     $date->setTimestamp(intval($row['rounddate']));
-    $date = date_parse($date->format('Y-m-d H:i:s'));
+    // $date = date_parse($date->format('Y-m-d H:i:s'));
 
     return [
         'gameround_id' => $row['gameround_id'],
