@@ -7,6 +7,7 @@ use Doctrine\DBAL\Tools\DsnParser;
 
 
 use Doctrine\DBAL\DriverManager;
+use Onphpoint\WebtCoreDoctrineDbal\Project_Twig_Extension;
 
 $dsnParser = new DsnParser();
 $connectionParams = $dsnParser
@@ -44,10 +45,11 @@ $rounds = array_map(function($row) {
     } else {
         $winner = 2;
     }
+	echo($row['player2_symbol']);
 
     return [
         'gameround_id' => $row['gameround_id'],
-        'rounddate' => $row['rounddate'],
+        'rounddate' => date_parse($row['rounddate']),
         'player1_name' => $row['player1_name'],
         'player1_symbol' => $row['player1_symbol'],
         'player2_name' => $row['player2_name'],
@@ -60,5 +62,7 @@ $rounds = array_map(function($row) {
 
 $loader = new \Twig\Loader\FilesystemLoader('../templates');
 $twig = new \Twig\Environment($loader);
+$twig->addExtension(new Project_Twig_Extension());
 $template = $twig->load('index.html.twig');
+
 echo $template->render(["gamerounds" => $rounds]);
