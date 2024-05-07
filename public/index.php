@@ -46,7 +46,6 @@ $rounds = array_map(function ($row) {
 	} else {
 		$winner = 2;
 	}
-	echo($row['player2_symbol']);
 
 	$date = new DateTime();
 	$date->setTimestamp(intval($row['rounddate']));
