@@ -34,7 +34,7 @@ $result = $queryBuilder->executeQuery();
 $rounds = array_map(function ($row) {
 
 	// calculate winner
-	$winner = null;
+//	$winner = null;
 	if ($row['player1_symbol'] === $row['player2_symbol']) {
 		$winner = null;
 	} elseif ($row['player1_symbol'] === 'R' && $row['player2_symbol'] === 'S') {
