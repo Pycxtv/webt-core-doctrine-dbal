@@ -1,11 +1,7 @@
 <?php
-// use Doctrine\DBAL\DriverManager;
-
 require_once '../vendor/autoload.php';
 
 use Doctrine\DBAL\Tools\DsnParser;
-
-
 use Doctrine\DBAL\DriverManager;
 use Onphpoint\WebtCoreDoctrineDbal\Project_Twig_Extension;
 
