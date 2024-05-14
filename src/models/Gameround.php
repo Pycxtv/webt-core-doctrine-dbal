@@ -1,4 +1,5 @@
 <?php
+namespace Onphpoint\WebtCoreDoctrineDbal\Models;
 use Doctrine\ORM\Mapping as ORM;
 
 
@@ -19,7 +20,9 @@ class Gameround {
     private string $player2_symbol;
 
 
-    #[Id, Column(type: 'integer'), GeneratedValue]
+    #[ORM\Column(type: 'integer')]
+    #[ORM\Id]
+    #[ORM\GeneratedValue]
     private int|null $gameround_id = null;
 
 	#[ORM\Column(type: 'integer')]
