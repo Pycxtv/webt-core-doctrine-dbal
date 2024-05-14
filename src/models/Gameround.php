@@ -8,16 +8,16 @@ use Doctrine\ORM\Mapping as ORM;
 class Gameround {
 
 	#[ORM\Column(type: 'string', length: 255)]
-    private string $player1_name;
+	private string $player1_name;
 
 	#[ORM\Column(type: 'string', length: 255)]
-    private string $player2_name;
+	private string $player2_name;
 
 	#[ORM\Column(type: 'string', length: 1)]
-    private string $player1_symbol;
+	private string $player1_symbol;
 
 	#[ORM\Column(type: 'string', length: 1)]
-    private string $player2_symbol;
+	private string $player2_symbol;
 
 
     #[ORM\Column(type: 'integer')]
@@ -26,7 +26,7 @@ class Gameround {
     private int|null $gameround_id = null;
 
 	#[ORM\Column(type: 'integer')]
-    private int $rounddate;
+	private int $rounddate;
 
 	/**
 	 * @param string $player1_name
