@@ -96,3 +96,9 @@ Apply this advanced user stories to a fitting CORE scenario of your choice.
 
 #### Links
 https://my.skilldisplay.eu/en/skillset/358
+
+
+---
+
+# Setup
+- `php bin/doctrine orm:schema-tool:create` to create the database

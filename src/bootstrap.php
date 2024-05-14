@@ -20,7 +20,7 @@ $config = ORMSetup::createAttributeMetadataConfiguration(
 // configuring the database connection
 $connection = DriverManager::getConnection([
     'driver' => 'pdo_sqlite',
-    'path' => __DIR__ . '/../usarps.sqlite',
+    'path' => __DIR__ . '/../usarps_orm.sqlite',
 ], $config);
 
 // obtaining the entity manager
