@@ -1,9 +1,9 @@
 <tr class="text-gray-100">
-    <td class="{{ gameround.winner == 1 ? "text-green-300 font-bold" : "" }}">{{ gameround.player1_name }}</td>
-    <td>{{ gameround.player1_symbol|rpsEmoji }}</td>
-    <td class="{{ gameround.winner == 2 ? "text-green-300 font-bold" : "" }}">{{ gameround.player2_name }}</td>
-    <td>{{ gameround.player2_symbol|rpsEmoji }}️</td>
-    <td>{{ gameround.rounddate | date("H:i") }}</td>
-    <td>{{ gameround.rounddate | date("j.n.Y") }}</td>
-    <td><form action="delete.php" method="post" class="mb-0"><input type="hidden" name="gameround_id" value="{{ gameround.gameround_id }}"><input type="submit" value="Löschen" class="bg-gray-700 px-2 py-1 cursor-pointer hover:bg-red-700 transition-colors rounded"></form></td>
+    <td class="{{ gameround.getWinner() == 1 ? "text-green-300 font-bold" : "" }}">{{ gameround.getPlayer1Name() }}</td>
+    <td>{{ gameround.getPlayer1Symbol() |rpsEmoji }}</td>
+    <td class="{{ gameround.getWinner() == 2 ? "text-green-300 font-bold" : "" }}">{{ gameround.getPlayer2Name() }}</td>
+    <td>{{ gameround.getPlayer2Symbol() |rpsEmoji }}️</td>
+    <td>{{ gameround.getDate() | date("H:i") }}</td>
+    <td>{{ gameround.getDate() | date("j.n.Y") }}</td>
+    <td><form action="delete.php" method="post" class="mb-0"><input type="hidden" name="gameround_id" value="{{ gameround.getGameroundId() }}"><input type="submit" value="Löschen" class="bg-gray-700 px-2 py-1 cursor-pointer hover:bg-red-700 transition-colors rounded"></form></td>
 </tr>
