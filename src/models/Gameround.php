@@ -79,7 +79,7 @@ class Gameround
     }
 
 
-    public function getWinner(): int
+    public function getWinner(): int|null
     {
         // calculate winner
         if ($this->getPlayer1Symbol() === $this->getPlayer2Symbol()) {
